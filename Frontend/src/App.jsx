@@ -5,6 +5,7 @@ import AboutUs from './pages/Aboutus'
 import Product from './pages/Product'
 import Contact from './pages/Contact'
 import Founder from './pages/Founder'
+import Donate from './pages/DonationPage'
 const App = () => {
   return (
     <>
@@ -14,6 +15,8 @@ const App = () => {
       <Route path='/Product' element={<Product />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/journey' element={<Founder />} />
+      <Route path='/donate' element={<Donate />} />
+
     </Routes>
 
     </>
