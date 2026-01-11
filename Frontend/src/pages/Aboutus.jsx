@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <div className="w-full bg-white">
         <Navbar/>
-      <header className="relative w-full overflow-hidden bg-slate-50 px-4 py-15 top-11 pt-[180px] text-center md:py-24">
+      <header className="relative w-full overflow-hidden bg-slate-50 px-4 py-15 top-11 pt-180px text-center md:py-24">
         {/* Pattern Background Layer */}
         <div
           className="pointer-events-none absolute inset-0 z-0 opacity-40"
@@ -40,7 +40,7 @@ const AboutUs = () => {
 
         {/* Section 1 */}
         <div className="flex flex-col gap-8 md:flex-row lg:items-center lg:gap-16">
-          <div className="h-[300px] w-full flex-1 md:h-[400px]">
+          <div className="h-300px w-full flex-1 md:h-400px">
             <img
               src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
               alt="All gadgets on a table"
@@ -69,7 +69,7 @@ const AboutUs = () => {
               expedita tenetur est ipsa sit.
             </p>
           </div>
-          <div className="h-[300px] w-full flex-1 md:h-[400px]">
+          <div className="h-300px w-full flex-1 md:h-400px">
             <img
               src="https://images.unsplash.com/photo-1552664730-d307ca884978"
               alt="Team working together"
@@ -80,7 +80,7 @@ const AboutUs = () => {
 
         {/* Section 3 */}
         <div className="my-16 flex flex-col gap-8 md:flex-row lg:items-center lg:gap-16">
-          <div className="h-[300px] w-full flex-1 md:h-[400px]">
+          <div className="h-300px w-full flex-1 md:h-400px">
             <img
               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
               alt="Laptop on table"

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-10 left-0 z-40 w-full h-[70px] flex items-center justify-between px-6 md:px-20 lg:px-24 xl:px-40 text-sm text-orange-800 bg-gradient-to-r from-orange-200 via-orange-100 to-orange-50">
+    <nav className="fixed top-10 left-0 z-40 w-full h-70px flex items-center justify-between px-6 md:px-20 lg:px-24 xl:px-40 text-sm text-orange-800 bg-linear-to-r from-orange-200 via-orange-100 to-orange-50">
 
       {/* Logo */}
       <NavLink to="/">
@@ -20,11 +20,10 @@ const Navbar = () => {
           Founder Journey
         </NavLink>
 
-        <NavLink to="/partners" className="hover:text-orange-600 transition">
+        <NavLink to="/Product" className="hover:text-orange-600 transition">
           Partner with us
         </NavLink>
 
-        {/* ✅ THIS FIXES YOUR ISSUE */}
         <NavLink to="/about" className="hover:text-orange-600 transition">
           About us
         </NavLink>
