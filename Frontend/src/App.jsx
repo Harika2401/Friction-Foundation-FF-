@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import AboutUs from './pages/Aboutus'
 import Product from './pages/Product'
-
+import Contact from './pages/Contact'
 const App = () => {
   return (
     <>
@@ -11,7 +11,7 @@ const App = () => {
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<AboutUs />} />
       <Route path='/Product' element={<Product />} />
-
+      <Route path='/contact' element={<Contact />} />
     </Routes>
 
     </>
