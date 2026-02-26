@@ -6,7 +6,6 @@ import Footer from '../Components/home/Footer'
 const Home = () => {
     return (
         <div>
-            <Banner />
             <Navbar/>
             <Hero/>
             {/* Mission & Vision */}
