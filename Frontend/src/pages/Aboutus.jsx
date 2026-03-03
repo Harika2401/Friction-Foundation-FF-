@@ -51,8 +51,6 @@ const AboutUs = () => {
           }}
         />
 
-        <Banner />
-
         <div className="relative z-10 mx-auto max-w-4xl">
           <h1 className="mb-3 text-4xl font-bold tracking-tight text-[#022747] md:text-6xl">
             About Friction Foundation

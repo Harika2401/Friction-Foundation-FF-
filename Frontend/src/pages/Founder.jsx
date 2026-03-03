@@ -1,7 +1,6 @@
 import React from "react";
 import founderImg from "../assets/founder.jpg";
 import Navbar from "../Components/home/Navbar";
-import Banner from "../Components/home/Banner";
 import Footer from "../Components/home/Footer";
 
 const colors = {
@@ -17,12 +16,6 @@ const FounderJourney = () => {
 
       {/* NAVBAR */}
       <Navbar />
-
-      {/* OPTIONAL BANNER (Intro / Quote / Impact) */}
-      <Banner
-        title="Founder Journey"
-        subtitle="A story driven by purpose, education, and impact"
-      />
 
       {/* HERO */}
       <section style={{ ...styles.section, background: colors.lightBlue }}>
@@ -117,7 +110,6 @@ const styles = {
   page: {
     fontFamily: "'Playfair Display', serif",
     color: colors.textDark,
-    paddingTop: "80px",
   },
 
   section: {
