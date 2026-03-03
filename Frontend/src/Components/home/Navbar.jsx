@@ -49,7 +49,7 @@ const Navbar = () => {
 
           {/* Donate Button */}
           <NavLink
-            to="/contact"
+            to="/Product"
             className="hidden md:block px-6 py-2 bg-orange-400 hover:bg-orange-700 active:scale-95 transition-all rounded-2xl text-white"
           >
             Donate For Change
