@@ -12,7 +12,7 @@ import {
 export default function Contact() {
   return (
     <>
-      <Navbar />
+      
 
       <section className="bg-white pt-40 pb-24 px-6">
 
@@ -24,11 +24,12 @@ export default function Contact() {
 
           <div className="w-16 h-[3px] bg-orange-400 mx-auto mt-2 mb-5"></div>
 
-          <p className="text-gray-500 text-base max-w-xl mx-auto leading-7">
-            We'd love to hear from you — whether you're a student, institution,
-            partner, or supporter.
-          </p>
-        </div>
+          <p className="text-gray-500 text-lg md:text-xl leading-8 w-full max-w-4xl mx-auto">
+  We'd love to hear from you — whether you're a student, institution,
+  partner, or supporter.
+</p>
+</div>
+            
 
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
@@ -192,7 +193,7 @@ export default function Contact() {
 
       </section>
 
-      <Footer />
+      
     </>
   );
 }

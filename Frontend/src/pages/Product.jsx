@@ -12,7 +12,7 @@ const Donate = () => {
 
   return (
     <>
-      <Navbar />
+      
 
       {/* PAGE WRAPPER */}
       <div style={{ paddingTop: "115px", fontFamily: "Poppins, sans-serif" }}>
@@ -187,7 +187,7 @@ const Donate = () => {
           </div>
         </section>
 
-        <Footer />
+        
       </div>
 
       {/* INLINE ANIMATION */}

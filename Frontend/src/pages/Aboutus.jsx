@@ -40,7 +40,7 @@ const AboutUs = () => {
 
   return (
     <div className="w-full bg-white">
-      <Navbar />
+      
 
       {/* HEADER SECTION */}
       <header className="relative top-11 w-full overflow-hidden bg-[#F2F4F7] px-4 py-16 text-center md:py-24">
@@ -185,7 +185,7 @@ const AboutUs = () => {
      
 
 
-      <Footer />
+      
     </div>
   );
 };

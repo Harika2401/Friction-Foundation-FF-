@@ -1,268 +1,166 @@
 import React from "react";
-// eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
-import { FaSearch, FaPencilRuler, FaTools, FaBullseye, FaArrowRight } from "react-icons/fa";
-import Navbar from "../Components/home/Navbar";
-import Footer from "../Components/home/Footer";
-import img1 from "../assets/donate.jpg";
-import img2 from "../assets/donate1.jpg";
-import img3 from "../assets/founder.jpg";
-import heroImg from "../assets/design.jpg";
+import { FaSearch, FaPencilRuler, FaTools, FaBullseye } from "react-icons/fa";
 
 const steps = [
-  { title: "Identify Problems", icon: <FaSearch /> },
-  { title: "Design the Approach", icon: <FaPencilRuler /> },
-  { title: "Build the Solution", icon: <FaTools /> },
-  { title: "Create Impact", icon: <FaBullseye /> },
-];
-
-const programs = [
   {
     title: "Identify Problems",
-    text: "Innovation begins with empathy and observation. Students study schools, colleges, villages and communities to identify genuine problems affecting people and environment.",
-    image: img1,
+    icon: <FaSearch />,
+    text: "Innovation begins with empathy and observation. Participants study their surroundings — schools, colleges, villages, cities, and communities — to identify genuine problems affecting people, systems, or the environment.",
   },
   {
     title: "Design the Approach",
-    text: "Every problem needs a thoughtful, creative design. Students brainstorm ideas, map journeys and sketch practical solutions using design thinking frameworks.",
-    image: img2,
+    icon: <FaPencilRuler />,
+    text: "Every problem needs a thoughtful, creative design. Students brainstorm ideas, map user journeys, sketch solutions, and design practical approaches using design thinking frameworks.",
   },
   {
     title: "Build the Solution",
-    text: "Ideas turn into real, workable solutions. Students convert designs into prototypes, models and digital solutions with mentor guidance.",
-    image: img3,
+    icon: <FaTools />,
+    text: "Ideas turn into real, workable solutions. Students convert their designs into prototypes, concepts, models, or digital solutions with mentor guidance and real-world constraints.",
   },
   {
     title: "Create Impact",
-    text: "Solutions that create real change — not just projects. Selected ideas are showcased to create measurable social and community impact.",
-    image: img1,
+    icon: <FaBullseye />,
+    text: "Solutions that create real change — not just projects. Selected ideas are showcased through platforms like NDIS-2026 and supported by TDCA, helping students create measurable impact.",
   },
 ];
 
 const DesignForChange = () => {
   return (
-    <>
-      <Navbar />
+    <div style={styles.page}>
 
-      <div style={{ paddingTop: "115px", background: "#f8fbff" }}>
+      {/* INTRO TEXT */}
+      <div style={styles.intro}>
+        <h2 style={styles.introTitle}>DESIGN FOR CHANGE</h2>
 
-        {/* HERO SECTION */}
-        <div style={styles.hero}>
-          <img src={heroImg} alt="Design For Change" style={styles.heroImage} />
-          <div style={styles.overlay}></div>
+        <p style={styles.introSubtitle}>
+          From Problems to Purposeful Impact
+        </p>
 
-          <div style={styles.heroText}>
-            <h1 style={styles.heroTitle}>
-              DESIGN FOR <span style={{ color: "#ff8500" }}>CHANGE</span>
-            </h1>
+        <p style={styles.introText}>
+          “Design for Change” is not just a theme — it is a mindset that empowers
+          students to observe real-world challenges, think creatively, and build
+          solutions that create measurable social impact.
+        </p>
+      </div>
 
-            <p style={styles.heroSubtitle}>
-              From Problems to Purposeful Impact
-            </p>
+      {/* VERTICAL STEPS */}
+      <div style={styles.verticalSteps}>
+        {steps.map((step, index) => (
+          <div key={index} style={styles.stepWrapper}>
 
-            <p style={styles.heroDescription}>
-              'Design for Change' is not just a theme — it is a mindset that empowers 
-              students to observe real-world challenges, think creatively, and build 
-              solutions that create measurable social impact.
-            </p>
+            <div style={styles.circle}>{step.icon}</div>
+
+            <h3 style={styles.stepTitle}>
+              {index + 1}. {step.title}
+            </h3>
+
+            <p style={styles.stepText}>{step.text}</p>
+
+            {index !== steps.length - 1 && (
+              <div style={styles.arrowWrapper}>
+                <svg width="20" height="80" viewBox="0 0 20 80">
+                  <line
+                    x1="10"
+                    y1="0"
+                    x2="10"
+                    y2="60"
+                    stroke="#ff8500"
+                    strokeWidth="3"
+                  />
+                  <polygon
+                    points="5,60 15,60 10,75"
+                    fill="#ff8500"
+                  />
+                </svg>
+              </div>
+            )}
+
           </div>
-        </div>
-
-{/* STEPS SECTION */}
-<div style={styles.stepsContainer}>
-  {steps.map((step, index) => (
-    <React.Fragment key={index}>
-      <div style={styles.stepItem}>
-        <div style={styles.circle}>{step.icon}</div>
-        <h4 style={styles.stepTitle}>{step.title}</h4>
+        ))}
       </div>
 
-      {index !== steps.length - 1 && (
-        <FaArrowRight style={styles.arrow} />
-      )}
-    </React.Fragment>
-  ))}
-</div>
-
-
-        {/* PROGRAMS SECTION */}
-        <div style={styles.programContainer}>
-          {programs.map((program, index) => {
-            const isLeft = index % 2 === 0;
-
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true, amount: 0.3 }}
-                style={{
-                  ...styles.row,
-                  flexDirection: isLeft ? "row" : "row-reverse",
-                }}
-              >
-                <img
-                  src={program.image}
-                  alt={program.title}
-                  style={styles.image}
-                />
-
-                <div style={styles.textBox}>
-                  <h3 style={styles.title}>{program.title}</h3>
-                  <p style={styles.text}>{program.text}</p>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-
-        <Footer />
-      </div>
-    </>
+    </div>
   );
 };
 
 const styles = {
-  hero: {
-    position: "relative",
+
+  page: {
+    background: "#f8fbff",
+    paddingTop: "120px", // space for navbar
+    paddingBottom: "60px",
+  },
+
+  intro: {
     textAlign: "center",
-    overflow: "hidden",
+    padding: "40px 20px 20px",
   },
 
-  heroImage: {
-    width: "100%",
-    height: "550px",
-    objectFit: "cover",
+  introTitle: {
+    color: "#1f3c88",
+    fontWeight: "700",
+    letterSpacing: "1px",
+    fontSize: "28px",
   },
 
-  overlay: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    background:
-      "linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4))",
-  },
-
-  heroText: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    color: "#fff",
-    width: "80%",
-  },
-
-  heroTitle: {
-    fontSize: "70px",
-    fontWeight: "900",
-    letterSpacing: "4px",
-    textTransform: "uppercase",
-  },
-
-  heroSubtitle: {
-    fontSize: "22px",
-    marginTop: "15px",
-    fontWeight: "500",
-    color: "#ffcc80",
-  },
-
-  heroDescription: {
+  introSubtitle: {
+    color: "#ff8500",
+    fontWeight: "600",
+    marginTop: "10px",
     fontSize: "18px",
-    marginTop: "25px",
-    lineHeight: "1.9",
-    maxWidth: "900px",
-    margin: "0 auto",
-    fontWeight: "300",
   },
 
- stepsContainer: {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  padding: "100px 0",
-  background: "#ffffff",
-},
-
-stepItem: {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  width: "220px",
-  textAlign: "center",
-},
-
-
-circle: {
-  width: "110px",
-  height: "110px",
-  borderRadius: "50%",
-  background: "#fff",
-  border: "3px solid #ff8500",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  fontSize: "34px",
-  color: "#ff8500",
-  marginBottom: "20px",
-},
-
-arrow: {
-  fontSize: "30px",
-  color: "#ff8500",
-  margin: "0 40px",
-},
-
-
-
-stepTitle: {
-  fontSize: "18px",
-  fontWeight: "700",
-  color: "#1f3c88",
-  whiteSpace: "nowrap",
-},
-
-
-  programContainer: {
-    width: "100%",
+  introText: {
+    maxWidth: "850px",
+    margin: "20px auto",
+    fontSize: "17px",
+    lineHeight: "1.8",
+    color: "#444",
   },
 
-  row: {
+  verticalSteps: {
+    maxWidth: "850px",
+    margin: "20px auto",
+    textAlign: "center",
+  },
+
+  stepWrapper: {
+    marginBottom: "40px",
+  },
+
+  circle: {
+    width: "90px",
+    height: "90px",
+    borderRadius: "50%",
+    border: "3px solid #ff8500",
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-between",
-    padding: "120px 10%",
-  },
-
-  image: {
-    width: "48%",
-    height: "400px",
-    objectFit: "cover",
-    borderRadius: "12px",
-    boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-  },
-
-  textBox: {
-    width: "48%",
-    background: "#ffffff",
-    padding: "60px",
-    borderRadius: "12px",
-    boxShadow: "0 20px 40px rgba(0,0,0,0.08)",
-  },
-
-  title: {
+    justifyContent: "center",
+    margin: "0 auto 20px",
+    fontSize: "32px",
     color: "#ff8500",
-    marginBottom: "25px",
-    fontSize: "28px",
-    fontWeight: "700",
+    background: "#fff",
   },
 
-  text: {
-    fontSize: "17px",
-    lineHeight: "1.9",
-    color: "#444",
+  stepTitle: {
+    fontSize: "20px",
+    fontWeight: "700",
+    color: "#1f3c88",
+    marginBottom: "12px",
+  },
+
+  stepText: {
+    fontSize: "16px",
+    color: "#555",
+    lineHeight: "1.8",
+    maxWidth: "700px",
+    margin: "0 auto",
+  },
+
+  arrowWrapper: {
+    display: "flex",
+    justifyContent: "center",
+    margin: "30px 0",
   },
 };
 

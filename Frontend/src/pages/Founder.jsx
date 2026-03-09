@@ -1,222 +1,174 @@
 import React from "react";
-import founderImg from "../assets/founder.jpg";
+import tdcaImg from "../assets/tdca.jpg";
+import ndisImg from "../assets/ndis.jpg";
 import Navbar from "../Components/home/Navbar";
 import Footer from "../Components/home/Footer";
 
 const colors = {
-  softOrange: "#e6b089",
-  lightBlue: "#eaf2f8",
+  lightBg: "#f4f7fb",
   deepBlue: "#2c3e50",
   textDark: "#2b2b2b",
+  orange: "#ff8500",
 };
 
-const FounderJourney = () => {
+const WhatWeDo = () => {
   return (
     <div style={styles.page}>
 
-      {/* NAVBAR */}
-      <Navbar />
+      
 
-      {/* HERO */}
-      <section style={{ ...styles.section, background: colors.lightBlue }}>
-        <div style={styles.hero}>
-          <div style={styles.heroText}>
-            <span style={styles.tagline}>Founder Journey</span>
-            <h1 style={styles.heroTitle}>
-              Building <br /> Education With Purpose
-            </h1>
-            <p style={styles.text}>
-              A journey that began with a belief — education should be
-              accessible to every learner, regardless of circumstance.
-            </p>
-          </div>
+      {/* WHAT WE DO SECTION */}
+      <section style={{ ...styles.section, background: colors.lightBg }}>
+        <div style={styles.header}>
+          <h2 style={styles.heading}>WHAT WE DO</h2>
 
-          <img src={founderImg} alt="Founder" style={styles.heroImage} />
-        </div>
-      </section>
-
-      {/* INTRO */}
-      <section style={styles.section}>
-        <div style={styles.intro}>
-          <div>
-            <h2 style={styles.title}>Where It All Began</h2>
-            <p style={styles.text}>
-              Growing up, I witnessed countless students with potential being
-              limited by financial barriers. This platform was born from a
-              simple question — what if opportunity wasn’t tied to privilege?
-            </p>
-          </div>
-
-          <img src={founderImg} alt="Journey" style={styles.sideImage} />
-        </div>
-      </section>
-
-      {/* VALUES */}
-      <section style={{ ...styles.section, background: "#fafafa" }}>
-        <h2 style={{ ...styles.title, textAlign: "center" }}>
-          What We Stand For
-        </h2>
-
-        <div style={styles.cardRow}>
-          {[
-            {
-              title: "Accessibility",
-              text: "Education made reachable for every student.",
-            },
-            {
-              title: "Transparency",
-              text: "Every donation, every impact — openly shared.",
-            },
-            {
-              title: "Empowerment",
-              text: "Helping learners shape their own futures.",
-            },
-          ].map((item, i) => (
-            <div key={i} style={styles.card}>
-              <h3 style={styles.cardTitle}>{item.title}</h3>
-              <p style={styles.text}>{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* QUOTE */}
-      <section style={styles.quote}>
-        <p style={styles.quoteText}>
-          “Education is not charity. It’s an investment in humanity.”
-        </p>
-        <span style={styles.quoteAuthor}>— Founder</span>
-      </section>
-
-      {/* CTA */}
-      <section style={styles.section}>
-        <div style={{ textAlign: "center" }}>
-          <h2 style={styles.title}>Join the Journey</h2>
-          <p style={styles.text}>
-            Your support helps turn dreams into classrooms, books, and futures.
+          <p style={styles.description}>
+            At <b>FrictionFoundation (FF)</b>, we focus on building a strong
+            design-led innovation ecosystem that turns ideas into real impact.
+            Our work is driven through <b>two core initiatives:</b>
           </p>
-          <button style={styles.button}>Support Education</button>
         </div>
+
+        {/* CARDS */}
+        <div style={styles.cardsContainer}>
+
+          {/* CARD 1 */}
+          <div style={styles.card}>
+            <img src={tdcaImg} alt="TDCA" style={styles.image} />
+
+            <h3 style={styles.cardTitle}>
+              Telangana Design & Creative Association (TDCA)
+            </h3>
+
+            <p style={styles.text}>
+              A statewide community for design-driven change
+            </p>
+
+            <button style={styles.button}>Enroll for TDCA</button>
+          </div>
+
+          {/* CARD 2 */}
+          <div style={styles.card}>
+            <img src={ndisImg} alt="NDIS" style={styles.image} />
+
+            <h3 style={styles.cardTitle}>
+              District-to-State Innovation Summits
+            </h3>
+
+            <p style={styles.text}>
+              From local problems to statewide impact
+            </p>
+
+            <button style={styles.button}>Explore for more</button>
+          </div>
+
+        </div>
+
+        {/* BOTTOM TEXT */}
+        <p style={styles.bottomText}>
+          Together, our <b>District-to-State Summits</b> form a continuous
+          ecosystem where <b>design leads to change</b>, and{" "}
+          <b>change leads to impact.</b>
+        </p>
       </section>
 
-      {/* FOOTER */}
-      <Footer />
+      
 
     </div>
   );
 };
 
 const styles = {
+
   page: {
     fontFamily: "'Playfair Display', serif",
     color: colors.textDark,
   },
 
   section: {
-    padding: "90px 10%",
+  padding: "140px 12% 90px 12%", 
+},
+
+  header: {
+    maxWidth: "800px",
+    margin: "0 auto 60px auto",
   },
 
-  hero: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: "60px",
-  },
+  heading: {
+  fontSize: "42px",
+  color: colors.deepBlue,
+  letterSpacing: "3px",
+  marginBottom: "35px",
+  textAlign: "center",
+  fontWeight: "600",
+},
+  description: {
+  fontSize: "20px",
+  lineHeight: "1.9",
+  maxWidth: "1100px",
+  margin: "0 auto 60px auto",
+  textAlign: "center",
+},
 
-  heroText: {
-    maxWidth: "45%",
-  },
+  cardsContainer: {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "flex-start",
+  gap: "80px",
+  flexWrap: "wrap",
+  marginTop: "60px",
+},
 
-  tagline: {
+  card: {
+  width: "340px",
+  background: "#fff",
+  padding: "25px",
+  borderRadius: "18px",
+  boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+  textAlign: "center",
+},
+
+  image: {
+  width: "100%",
+  height: "220px",
+  objectFit: "cover",
+  borderRadius: "16px",
+  marginBottom: "18px",
+},
+
+  cardTitle: {
     fontSize: "20px",
-    letterSpacing: "2px",
-    textTransform: "uppercase",
-    color: "#ff8500",
-  },
-
-  heroTitle: {
-    fontSize: "52px",
-    margin: "20px 0",
     color: colors.deepBlue,
-  },
-
-  title: {
-    fontSize: "36px",
-    marginBottom: "20px",
-    color: colors.deepBlue,
+    marginBottom: "10px",
   },
 
   text: {
-    fontSize: "16px",
-    lineHeight: "1.8",
-  },
-
-  heroImage: {
-    width: "360px",
-    borderRadius: "14px",
-  },
-
-  intro: {
-    display: "flex",
-    gap: "80px",
-    alignItems: "center",
-  },
-
-  sideImage: {
-    width: "300px",
-    borderRadius: "14px",
-  },
-
-  cardRow: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "40px",
-    marginTop: "50px",
-  },
-
-  card: {
-    background: "#fff",
-    padding: "32px",
-    width: "260px",
-    borderRadius: "18px",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
-    textAlign: "center",
-  },
-
-  cardTitle: {
-    color: "#ff8500",
-    marginBottom: "12px",
-    fontSize: "20px",
-  },
-
-  quote: {
-    background: colors.deepBlue,
-    color: "#fff",
-    padding: "100px 10%",
-    textAlign: "center",
-  },
-
-  quoteText: {
-    fontSize: "28px",
-    fontStyle: "italic",
-  },
-
-  quoteAuthor: {
-    display: "block",
-    marginTop: "20px",
-    opacity: 0.8,
+    fontSize: "15px",
+    lineHeight: "1.6",
   },
 
   button: {
-    marginTop: "30px",
-    padding: "14px 42px",
+    marginTop: "18px",
+    padding: "12px 28px",
     borderRadius: "30px",
     border: "none",
-    background: "#ff8500",
+    background: colors.orange,
     color: "#fff",
-    fontSize: "16px",
+    fontSize: "14px",
     cursor: "pointer",
   },
+
+  bottomText: {
+  marginTop: "70px",
+  fontSize: "19px",
+  maxWidth: "720px",
+  marginLeft: "auto",
+  marginRight: "auto",
+  textAlign: "center",
+  lineHeight: "1.7",
+},
+
+
 };
 
-export default FounderJourney;
+export default WhatWeDo;
