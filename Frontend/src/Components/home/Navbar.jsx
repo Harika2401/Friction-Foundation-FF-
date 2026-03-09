@@ -33,7 +33,7 @@ const Navbar = () => {
             Get Involved
           </NavLink>
 
-          <NavLink to="/Product" className="px-4 hover:text-orange-600 transition">
+          <NavLink to="/Contact" className="px-4 hover:text-orange-600 transition">
             Contact Us
           </NavLink>
         </div>
