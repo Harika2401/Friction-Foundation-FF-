@@ -143,7 +143,7 @@ const AboutUs = () => {
                 (e.currentTarget.style.background = "#ff8500")
               }
               style={{
-                background: "#ff8500",
+                background: "#F47C20",
                 color: "#fff",
                 border: "none",
                 padding: "16px 40px",

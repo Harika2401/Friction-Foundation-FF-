@@ -108,7 +108,7 @@ const styles = {
   },
 
   primaryBtn: {
-    background: "#ff8500",
+    background: "#EA6A08",
     color: "#fff",
     border: "none",
     padding: "14px 28px",

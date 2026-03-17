@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="bg-[#062F3C] text-gray-300 px-6 md:px-16 lg:px-24 xl:px-32 pt-12 pb-6">
@@ -5,10 +6,10 @@ export default function Footer() {
       {/* Top Logo */}
       <div className="flex justify-center mb-8">
         <img
-          src="https://via.placeholder.com/150x50"
-          alt="logo"
-          className="h-12"
-        />
+  src="footerlogo-removebg-preview.png"
+  alt="logo"
+  className="h-22"
+/>
       </div>
 
       {/* Divider */}
@@ -47,12 +48,12 @@ export default function Footer() {
         <div className="text-center sm:text-left lg:text-center">
           <h2 className="text-white font-semibold mb-4">Company</h2>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-white">About us</a></li>
-            <li><a href="#" className="hover:text-white">Design For Change</a></li>
-            <li><a href="#" className="hover:text-white">What we do</a></li>
-            <li><a href="#" className="hover:text-white">Get Involved</a></li>
-            <li><a href="#" className="hover:text-white">Contact us</a></li>
-            <li><a href="#" className="hover:text-white">Donate For Change</a></li>
+            <li><Link to="/about" className="hover:text-white">About Us</Link></li>
+            <li><Link to="/donate" className="hover:text-white">Design For Change</Link></li>
+            <li><Link to="/journey" className="hover:text-white">What we do</Link></li>
+            <li><Link to="/Product" className="hover:text-white">Get Involved</Link></li>
+            <li><Link to="/Contact" className="hover:text-white">Contact us</Link></li>
+            <li><Link to="/Product" className="hover:text-white">Donate For Change</Link></li>
           </ul>
         </div>
 

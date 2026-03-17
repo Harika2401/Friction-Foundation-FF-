@@ -12,7 +12,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <NavLink to="/" >
-          <img src="image-Photoroom.png" alt="logo" className="w-48" />
+          <img src="logo.jpeg" alt="logo" className="w-48" />
         </NavLink>
 
         {/* Desktop Links */}
@@ -50,7 +50,8 @@ const Navbar = () => {
           {/* Donate Button */}
           <NavLink
             to="/Product"
-            className="hidden md:block px-6 py-2 bg-orange-400 hover:bg-orange-700 active:scale-95 transition-all rounded-2xl text-white"
+            className="hidden md:block px-6 py-2 bg-[#EA6A08]
+ hover:bg-orange-700 active:scale-95 transition-all rounded-2xl text-white"
           >
             Donate For Change
           </NavLink>

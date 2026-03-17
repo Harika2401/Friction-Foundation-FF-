@@ -14,14 +14,10 @@ const colors = {
 const WhatWeDo = () => {
   return (
     <div style={styles.page}>
-
-      
-
       {/* WHAT WE DO SECTION */}
       <section style={{ ...styles.section, background: colors.lightBg }}>
         <div style={styles.header}>
           <h2 style={styles.heading}>WHAT WE DO</h2>
-
           <p style={styles.description}>
             At <b>FrictionFoundation (FF)</b>, we focus on building a strong
             design-led innovation ecosystem that turns ideas into real impact.
@@ -35,30 +31,28 @@ const WhatWeDo = () => {
           {/* CARD 1 */}
           <div style={styles.card}>
             <img src={tdcaImg} alt="TDCA" style={styles.image} />
-
-            <h3 style={styles.cardTitle}>
-              Telangana Design & Creative Association (TDCA)
-            </h3>
-
-            <p style={styles.text}>
-              A statewide community for design-driven change
-            </p>
-
+            <div style={styles.cardBody}>
+              <h3 style={styles.cardTitle}>
+                Telangana Design & Creative Association (TDCA)
+              </h3>
+              <p style={styles.text}>
+                A statewide community for design-driven change
+              </p>
+            </div>
             <button style={styles.button}>Enroll for TDCA</button>
           </div>
 
           {/* CARD 2 */}
           <div style={styles.card}>
             <img src={ndisImg} alt="NDIS" style={styles.image} />
-
-            <h3 style={styles.cardTitle}>
-              District-to-State Innovation Summits
-            </h3>
-
-            <p style={styles.text}>
-              From local problems to statewide impact
-            </p>
-
+            <div style={styles.cardBody}>
+              <h3 style={styles.cardTitle}>
+                District-to-State Innovation Summits
+              </h3>
+              <p style={styles.text}>
+                From local problems to statewide impact
+              </p>
+            </div>
             <button style={styles.button}>Explore for more</button>
           </div>
 
@@ -71,9 +65,6 @@ const WhatWeDo = () => {
           <b>change leads to impact.</b>
         </p>
       </section>
-
-      
-
     </div>
   );
 };
@@ -110,38 +101,43 @@ const styles = {
   textAlign: "center",
 },
 
-  cardsContainer: {
+ cardsContainer: {
   display: "flex",
   justifyContent: "center",
-  alignItems: "flex-start",
+  alignItems: "stretch",       // ← makes both cards same height
   gap: "80px",
   flexWrap: "wrap",
   marginTop: "60px",
 },
+image:{
+ width: "400px",
+height: "249px",
+top: "238px",
+left: "781px",
+angle: "0 deg",
+opacity: "1",
+borderRadius: "19px"
 
-  card: {
+},
+card: {
   width: "340px",
-  background: "#fff",
   padding: "25px",
   borderRadius: "18px",
-  boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
   textAlign: "center",
+  display: "flex",
+  flexDirection: "column",
 },
 
-  image: {
-  width: "100%",
-  height: "220px",
-  objectFit: "cover",
-  borderRadius: "16px",
-  marginBottom: "18px",
+cardBody: {
+  flex: 1,                     // ← pushes button to bottom, equalizes text area
 },
 
-  cardTitle: {
-    fontSize: "20px",
-    color: colors.deepBlue,
-    marginBottom: "10px",
-  },
-
+cardTitle: {
+  fontSize: "20px",
+  color: colors.deepBlue,
+  marginBottom: "10px",
+  minHeight: "60px",           // ← reserves fixed space for title regardless of length
+},
   text: {
     fontSize: "15px",
     lineHeight: "1.6",
